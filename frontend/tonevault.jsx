@@ -1,7 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
+import Root from './components/root';
+import configureStore from './store/store';
+
 document.addEventListener('DOMContentLoaded', () => {
     const root = document.querySelector('#root');
-    ReactDOM.render(<h1>Tonevault is coming soon...</h1>, root)
+
+    let store = configureStore()
+
+    ReactDOM.render(<Root store={store} />, root)
 });
