@@ -1,0 +1,46 @@
+.navbar {
+    background: #333;
+    font-family: Interstate,Lucida Grande, Arial, sans-serif;
+    font-weight: 100;
+    font-size: 14px;
+    line-height: 1.5;
+    width: 100%;
+    position: fixed;
+    height: 46px;
+    color: #999;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+}
+
+.nav-left {
+    margin-left: 5px;
+}
+
+.nav-right {
+    margin-right: 5px
+}
+
+.greeting-logged-in {
+    
+}
+
+.greeting-logged-out {
+
+}
+
+.logout {
+    border-radius: 6px;
+    border-color: black;
+}
+
+.signup {
+    border-radius: 6px;
+    border-color: black;
+}
+
+.login {
+    border-radius: 6px;
+    border-color: black;
+}

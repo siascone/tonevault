@@ -3,7 +3,9 @@ class Api::SessionsController < ApplicationController
         @user = User.find_by_credentials(params[:user][:username], params[:user][:password])
 
         if @user
+            debugger
             login(@user)
+            debugger
             render "api/users/show"
         else
             render json: ["Invalid username/passowrd combination"], status: 401
