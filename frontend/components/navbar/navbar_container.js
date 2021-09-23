@@ -1,20 +1,21 @@
 import { connect } from 'react-redux';
-
-import { logout, signup, login } from '../../util/session_api_util';
+import { openModal } from '../../actions/modal_actions';
+import { logout, signup, login } from '../../actions/session_actions';
 import NavBar from './navbar'
 
 const mapStateToProps = (state) => {
     return {
-        currentUser: state.session.currentUser
+        currentUser: state.session.currentUser,
+        modalType: state.ui.modal
     };
 };
 
 const mapDispatchToProps = dispatch => {
     return {
-        signup: () => alert("We're sorry, signup functionality does not yet work"),
-        login: () => alert("We're sorry, Sign in functionality does not yet work"),
+        openModal: modalType => dispatch(openModal(modalType)),
         logout: () => dispatch(logout())
     };
+    
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(NavBar)

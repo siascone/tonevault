@@ -1,0 +1,19 @@
+.modal {
+    display: flex;
+    width: 40%;
+    // left: 30px;
+    margin: 0 auto;
+    margin-top: 76px;
+    height: 400px;
+    padding: 25px;
+    background: #fff;
+    border: 1px solid lightgray;
+    // margin: 76px 0 30px;
+    // position: absolute;
+    // left: calc(50% - width);
+    top: 0;
+    transform: translateZ(0);
+    visibility: visible;
+    z-index: 3000;
+    box-sizing: border-box;
+}

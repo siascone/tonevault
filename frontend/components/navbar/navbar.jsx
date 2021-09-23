@@ -3,28 +3,32 @@ import React from 'react';
 class Navbar extends React.Component {
     constructor(props) {
         super(props)
+
     }
 
     render() {
 
-        const { currentUser, signup, login, logout } = this.props
-        let greeting
+        const { currentUser, openModal, logout } = this.props;
+        const signup = 'signup';
+        const login = 'login';
+        let greeting;
+
         if (currentUser) {
             greeting = <div className='greeting-logged-in'>
                 <p>Welcome {currentUser.username}</p>
-                <button onClick={ logout }>Logout</button>
+                <button className="logout" onClick={ logout }>Logout</button>
             </div>
         } else {
             greeting = <div className='greeting-logged-out'>
-                <button onClick={login}>Sign in</button>
-                <button onClick={signup}>Create Account</button>
+                <button className="login" name='login' onClick={e => openModal(e.currentTarget.name)}>Sign in</button>
+                <button className="signup" name='signup' onClick={e => openModal(e.currentTarget.name)}>Create Account</button>
             </div>
         }
 
         return (
             <div className='navbar'>
                 <div className="nav-left">
-                    Tonevault
+                    <p>TONEVAULT</p>
                 </div>
                 <div className="nav-right">
                     {greeting}
