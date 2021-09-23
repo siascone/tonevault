@@ -15,7 +15,7 @@ const App = () => {
             <NavBarContainer />
             <Modal />
             <Switch>
-                
+                <Route path='/' component={Splash} />
             </Switch>
         </div>
     )

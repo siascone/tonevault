@@ -15,13 +15,16 @@ function Modal({ modal }) {
     switch(modal) {
         case "signup":
             component = <SignupFormContainer />
-            return component
+            break
         case "login":
             component = <LoginFormContainer />
-            return component
+            break
         default:
             return null;
     };
+    
+    return <div className="modal-wrapper">{component}</div>
+
 };
 
 const mapStateToProps = (state) => {
