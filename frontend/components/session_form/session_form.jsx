@@ -23,16 +23,20 @@ class SessionForm extends React.Component {
         e.preventDefault();
         const user = Object.assign({}, this.state);
         this.props.processForm(user)
-            .then(() => this.props.closeModal());
-        // this.props.closeModal()
+            .then(() => this.props.closeModal())
+            .then(() => this.props.history.push('/discover'));
+            
+        // this.props.history.push('/discover')
 
     };
 
     guestLogin(e) {
         e.preventDefault();
         this.props.loginDemoUser()
-            .then(() => this.props.closeModal());
-        // this.props.closeModal();
+            .then(() => this.props.closeModal())
+            .then(() => this.props.history.push('/discover'));
+
+        // this.props.history.push('/discover')
     }
 
     renderErrors() {
@@ -50,7 +54,7 @@ class SessionForm extends React.Component {
     }
 
     render() {
-        debugger;
+        // debugger;
         let fields;
         
         if (this.props.formType === 'signup') {

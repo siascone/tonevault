@@ -1,9 +1,16 @@
 import React from 'react';
+import { withRouter } from 'react-router-dom';
 
 class Navbar extends React.Component {
     constructor(props) {
         super(props)
 
+        this.handleLogout = this.handleLogout.bind(this);
+    }
+
+    handleLogout() {
+        this.props.logout();
+        this.props.history.push('/logout');
     }
 
     render() {
@@ -16,7 +23,7 @@ class Navbar extends React.Component {
         if (currentUser) {
             greeting = <div className='greeting-logged-in'>
                 <p>Welcome {currentUser.username}</p>
-                <button className="logout" onClick={ logout }>Logout</button>
+                <button className="logout" onClick={ this.handleLogout }>Logout</button>
             </div>
         } else {
             greeting = <div className='greeting-logged-out'>
@@ -38,4 +45,4 @@ class Navbar extends React.Component {
     }
 }
 
-export default Navbar;
+export default withRouter(Navbar);
