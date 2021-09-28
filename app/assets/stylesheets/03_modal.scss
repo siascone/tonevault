@@ -10,11 +10,12 @@
 
 .modal {
     display: flex;
+    flex-direction: column;
     width: 450px;
     // left: 30px;
     margin: 0 auto;
     margin-top: 76px;
-    height: 400px;
+    // height: 400px;
     padding: 25px;
     background: #fff;
     border: 1px solid lightgray;
@@ -26,4 +27,21 @@
     visibility: visible;
     z-index: 3000;
     box-sizing: border-box;
+}
+
+.modal-wrapper-close {
+    position: absolute;
+    right: 14px;
+    top: 14px;
+    background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	// font: inherit;
+	cursor: pointer;
+	outline: inherit;
+    font-size: 18px;
+    font-family: Lucida Grande,Helvetica,Arial,sans-serif;
+
+    // background-color: hsla(0,0%,94.9%,.9)
 }

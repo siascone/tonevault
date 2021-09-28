@@ -16,8 +16,8 @@ class Navbar extends React.Component {
     render() {
 
         const { currentUser, openModal, logout } = this.props;
-        const signup = 'signup';
-        const login = 'login';
+        const signup = 'Signup';
+        const login = 'Login';
         let greeting;
 
         if (currentUser) {
@@ -27,8 +27,8 @@ class Navbar extends React.Component {
             </div>
         } else {
             greeting = <div className='greeting-logged-out'>
-                <button className="login" name='login' onClick={e => openModal(e.currentTarget.name)}>Sign in</button>
-                <button className="signup" name='signup' onClick={e => openModal(e.currentTarget.name)}>Create Account</button>
+                <button className="login" name='Login' onClick={e => openModal(e.currentTarget.name)}>Sign in</button>
+                <button className="signup" name='Signup' onClick={e => openModal(e.currentTarget.name)}>Create Account</button>
             </div>
         }
 

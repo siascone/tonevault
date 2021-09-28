@@ -9,7 +9,7 @@ import { closeModal } from '../../actions/modal_actions';
 const mapStatetoProps = ({ errors }) => {
     return {
         errors: Object.values(errors.sessionErrors),
-        formType: 'signup'
+        formType: 'Signup'
     };
 };
 

@@ -57,53 +57,63 @@ class SessionForm extends React.Component {
         // debugger;
         let fields;
         
-        if (this.props.formType === 'signup') {
+        if (this.props.formType === 'Signup') {
             fields = <div className='session-form-fields'>
-                <label id="username">
+                <label>
                     <input
+                        id="username"
                         type="text"
                         placeholder="username"
                         value={this.state.username}
                         onChange={this.update('username')}
+                        required
                     />
                 </label>
                 <br />
-                <label id="email">
+                <label>
                     <input
-                        type="text"
+                        id="email"
+                        type="email"
                         placeholder="email"
                         value={this.state.email}
                         onChange={this.update('email')}
+                        required
                     />
                 </label>
                 <br />
-                <label id="password">
+                <label>
                     <input
+                        id="password"
                         type="password"
                         placeholder="password"
                         value={this.state.password}
                         onChange={this.update('password')}
+                        required
                     />
                 </label>
                 <br />
             </div>
         } else {
             fields = <div className='session-form-fields'>
-                <label id="username">
+                <label>
                     <input
+                        id="username"
                         type="text"
                         placeholder="username"
                         value={this.state.username}
                         onChange={this.update('username')}
+                        required
                     />
                 </label>
                 <br />
-                <label id="password">
+                <label>
                     <input
+                        id="password"
                         type="password"
                         placeholder="password"
                         value={this.state.password}
                         onChange={this.update('password')}
+                        required
                     />
                 </label>
                 <br />
@@ -124,6 +134,16 @@ class SessionForm extends React.Component {
                             Guest Login
                     </button>
                 </form>
+                <p className='session-notice'>
+                    We will not use your email and devices information for updates and tips
+                    on Tonevault's products and services, nor for activity notifications.
+                    There is currently nothing to unsubscribe from so, no need to worry.
+                </p>
+                <br />
+                <p className='session-notice'>
+                    We also won't use the information you provid to
+                    target adds as not described in our non existant Privacy Policy.
+                </p>
                 {this.renderErrors()}
             </div>
         )

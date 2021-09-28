@@ -6,7 +6,7 @@ import { withRouter } from 'react-router-dom';
 import SignupFormContainer from '../session_form/signup_form_container';
 import LoginFormContainer from '../session_form/login_form_container';
 
-function Modal({ modal }) {
+function Modal({ modal, closeModal }) {
     if (!modal) {
         return null;
     }
@@ -14,18 +14,22 @@ function Modal({ modal }) {
     let component;
 
     switch(modal) {
-        case "signup":
+        case "Signup":
             component = <SignupFormContainer />
             break
-        case "login":
+        case "Login":
             component = <LoginFormContainer />
             break
         default:
             return null;
     };
-
-    return <div className="modal-wrapper">{component}</div>
-
+    
+    return (
+        <div className="modal-wrapper">
+            <button className='modal-wrapper-close' onClick={closeModal}>X</button>
+            {component}
+        </div>
+    )
 };
 
 const mapStateToProps = (state) => {
