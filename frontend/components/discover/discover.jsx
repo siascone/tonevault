@@ -8,8 +8,8 @@ class Discover extends React.Component {
 
     render() {
         return (
-            <div>
-                <h1>A Super awesome discovery page is on it's way...</h1>
+            <div className='discovery-main'>
+                <h1>A super awesome discovery page is on it's way...</h1>
             </div>
         )
     }
