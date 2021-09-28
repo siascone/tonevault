@@ -39,8 +39,37 @@
     font-family: Lucida Grande,Helvetica,Arial,sans-serif;
 }
 
-input:invalid {
-    border: 2px solid red;
+// .session-form input:not(:focus):not(:placeholder-shown):invalid {
+//     border: 2px solid red !important;
+// }
+
+// .failed-login to be added to below
+
+input.required:placeholder-shown {
+  border: 2px solid red !important;
+//   position: relative;
 }
+
+.error-message {
+    font-family: Lucida Grande,Helvetica,Arial,sans-serif;
+    font-size: 12px;
+    color: red;
+    position: relative;
+    top: -20px;
+    padding: 2px;
+    // order: 2;
+    // position: absolute;
+}
+
+.session-form-fields input {
+    // order: 1;
+    // position: relative;
+}
+
+// .session-form-fields {
+//     display: flex;
+//     flex-direction: column;
+// }
+
 
 

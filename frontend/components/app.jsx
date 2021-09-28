@@ -20,6 +20,7 @@ const App = () => {
                 <Route exact path='/logout' component={Logout} />
                 <ProtectedRoute exact path='/discover' component={Discover} />
                 <Route exact path='/' component={Splash} />
+                <Redirect to='/' />
             </Switch>
         </div>
     )

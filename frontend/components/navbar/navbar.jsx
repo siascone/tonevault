@@ -1,5 +1,5 @@
 import React from 'react';
-import { withRouter } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
 
 class Navbar extends React.Component {
     constructor(props) {
@@ -22,7 +22,7 @@ class Navbar extends React.Component {
 
         if (currentUser) {
             greeting = <div className='greeting-logged-in'>
-                <p>Welcome {currentUser.username}</p>
+                <p className='greeting-message'>Welcome, {currentUser.username}</p>
                 <button className="logout" onClick={ this.handleLogout }>Logout</button>
             </div>
         } else {
@@ -34,9 +34,11 @@ class Navbar extends React.Component {
 
         return (
             <div className='navbar'>
-                <div className="nav-left">
-                    <p>TONEVAULT</p>
-                </div>
+                <Link className='logo-link' to='/'>
+                    <div className="nav-left">
+                        <p>TONEVAULT</p>
+                    </div>
+                </Link>
                 <div className="nav-right">
                     {greeting}
                 </div>

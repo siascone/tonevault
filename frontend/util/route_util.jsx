@@ -28,12 +28,12 @@ const Protected = ({ component: Component, path, loggedIn, exact }) => (
     />
 );
 
-// const SplashFeed = ({ component: Component, path, loggedIn, exact }) => (
+// const Logout = ({ component: Component, path, loggedIn, exact }) => (
 //     <Route
 //         path={path}
 //         exact={exact}
 //         render={props => (
-//             loggedIn ? <Component {...props} /> : <Splash />
+//             !loggedIn ? <Component {...props} /> : <Redirect to='/discover' />
 //         )}
 //     />
 // );
@@ -50,6 +50,6 @@ export const ProtectedRoute = withRouter(
     connect(mapStateToProps, null)(Protected)
 );
 
-// export const SplashFeedRoute = withRouter(
-//     connect(mapStateToProps, null)(SplashFeed)
+// export const LogoutRoute = withRouter(
+//     connect(mapStateToProps, null)(Logout)
 // );
