@@ -3,6 +3,9 @@
     flex-direction: column;
     align-items: center;
     width: 100%;
+    background-color: rgb(247, 243, 243);
+    color: #333;
+
     // object-fit: contain;
 }
 
@@ -13,7 +16,7 @@
 //     font-family: Lucida Grande,Helvetica,Arial,sans-serif;
 // }
 
-.explore, .upload, .signup-button {
+.explore, .signup-button {
     background-color: #f50;
     display: inline-block;
     position: relative;
@@ -37,7 +40,8 @@
 .splash-carousel, .splash-search-upload, .splash-spotlight, 
 .splash-creators-cta, .splash-thankyou, .spalsh-footer {
     width: 80%;
-    border: red 2px solid;
+    // border: red 2px solid;
+    background-color: white;
 }
 
 .splash-carousel {
@@ -50,11 +54,101 @@
 .splash-search-upload {
     display: flex;
     justify-content: center;
+    padding-top: 75px;
+    padding-bottom: 75px;
+}
+
+.splash-search {
+    padding: 0;
+    display: inline-block;
+    width: 600px;
+    // margin-right: 14px;
+    position: relative;
+    color: #999;
+    font-size: 16px;
+    font: 12px/1.4 Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;
+
+
+}
+
+.splash-search input {
+    background: #f2f2f2;
+    padding: 0 16px;
+    height: 46px;
+    color: #666;
+    outline: 0;
+    border: 0;
+    font-weight: 100;
+    box-sizing: border-box;
+    -webkit-appearance: none;
+    width: 100%;
+    transition: all .3s ease-in-out;
+    display: inline-block;
+    font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;
+    // font-weight: 100;
+    font-size: 14px;
+    line-height: 20px;
+    // padding: 2px 7px;
+    border-radius: 4px;
+    // border: 1px solid #ccc;
+    transition: border-color .1s;
+    // margin-right: 28px;
+
+}
+
+.search-icon-button {
+    background: url(https://a-v2.sndcdn.com/assets/images/search-dbfe5cbb.svg) 0 0 no-repeat;
+    background-size: 19px 19px;
+    background-position: 50%;
+    top: 0;
+    right: 0;
+    width: 50px;
+    height: 46px;
+    border: 0;
+    padding: 0;
+    // padding: auto, auto;
+    position: absolute;
+    cursor: pointer;
+}
+
+.splash-search-upload p {
+
+    text-align: center;
+    font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;
+    margin: auto 0;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.splash-upload {
+    // margin-left: 14px;
+    padding: 13px 23px;
+    height: 46px;
+    background-color: #f50;
+    border-color: #f50;
+    color: #fff;
+    font-size: 16px;
+    line-height: 18px;
+    border: 1px solid #e5e5e5;
+    border-radius: 3px;
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    white-space: nowrap;
+    font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;
+    font-weight: 100;
+    text-align: center;
+    vertical-align: baseline;
+    -webkit-user-select: none;
+    box-sizing: border-box;
+    text-decoration: none;
 }
 
 .splash-spotlight {
     display: flex;
     flex-direction: column;
+    padding-top: 75px;
+    padding-bottom: 75px;
 }
 
 .splash-creators-cta {
@@ -64,4 +158,11 @@
     background-image: url(https://a-v2.sndcdn.com/assets/images/hp_creator_image_featured_artists-798050ae.jpg);
     background-size: contain;
     background-repeat: no-repeat;
+}
+
+.splash-thankyou {
+    display: flex;
+    flex-direction: column;
+    padding-top: 75px;
+    padding-bottom: 75px;
 }

@@ -4,6 +4,11 @@
     align-items: center;
     width: 100%;
     font-family: Lucida Grande,Helvetica,Arial,sans-serif;
+    background-color: rgb(247, 243, 243);
+}
+
+.logout-message, .logout-bio, .logout-projects {
+    background-color: white;
 }
 
 .logout-main h1 {
@@ -19,36 +24,36 @@
 .logout-message {
     display: flex;
     justify-content: center;
-    width: 80%;
-    margin-top: 75px;
-    margin-bottom: 75px;
+    min-width: 80%;
+    padding-top: 75px;
+    padding-bottom: 75px;
 }
 
 .logout-bio {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 80%;
+    min-width: 80%;
     align-items: center;
-    margin-top: 50px;
-    margin-bottom: 50px;
+    padding-top: 50px;
+    padding-bottom: 50px;
 }
 
 .logout-projects {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 80%;
-    margin-top: 50px;
-    margin-bottom: 50px;
+    min-width: 80%;
+    padding-top: 50px;
+    padding-bottom: 50px;
 }
 
 .projects {
     width: 100%;
     display: flex;
     justify-content: space-evenly;
-    margin-top: 25px;
-    margin-bottom: 25px;    
+    padding-top: 25px;
+    padding-bottom: 25px;    
 }
 
 .projects div, .social-media div {
@@ -64,8 +69,8 @@
 
 .bio-and-image {
     display: flex;
-    margin-top: 25px;
-    margin-bottom: 25px;
+    padding-top: 25px;
+    padding-bottom: 25px;
     justify-content: space-evenly;
 }
 
@@ -77,6 +82,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    // background-image: url('../images/bio_image.JPG');
+    
 }
 
 .pic {
@@ -84,10 +91,18 @@
     justify-content: center;
     align-items: center;
     background-color: black;
+    // background-image: url(../images/bio_image.JPG);
     color: #FF5500;
     border-radius: 3px;
     height: 400px;
     width: 400px;
+    
+}
+
+.pic img {
+    height: 100%;
+    width: 100%;
+    border-radius: 3px;
 }
 
 .bio {
@@ -118,7 +133,7 @@
     width: 100%;
     display: flex;
     justify-content: space-evenly;
-    margin-top: 25px;
-    margin-bottom: 25px;
+    padding-top: 25px;
+    padding-bottom: 25px;
     
 }

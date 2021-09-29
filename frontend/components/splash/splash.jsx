@@ -13,16 +13,17 @@ class Splash extends React.Component {
                 </div>
 
                 <div className='splash-search-upload'>
-                    <div>
+                    <form className='splash-search'>
                         <label htmlFor="splash-search"></label>
                         <input
                             id='splash-search'
                             type="text" 
                             placeholder='Search for artists, bands, tracks, podcasts' 
                         />
-                    </div>
+                        <button className='search-icon-button'></button>
+                    </form>
                     <p>or</p>
-                    <button className='upload'>Upload your own</button>
+                    <button className='splash-upload'>Upload your own</button>
                 </div>
 
                 <div className='splash-spotlight'>
@@ -53,9 +54,9 @@ class Splash extends React.Component {
                     </div>
                 </div>
 
-                <div className='spalsh-footer'>
+                {/* <div className='spalsh-footer'>
                     Footer stuff here
-                </div>
+                </div> */}
             </div>
         )
     }
