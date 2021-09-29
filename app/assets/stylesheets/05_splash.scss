@@ -5,6 +5,8 @@
     width: 100%;
     background-color: rgb(247, 243, 243);
     color: #333;
+    font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;
+    min-width: 960px;
 
     // object-fit: contain;
 }
@@ -17,15 +19,16 @@
 // }
 
 .explore, .signup-button {
+    // border-color: #f50;
     background-color: #f50;
+    border: 1px solid #f50;
     display: inline-block;
     position: relative;
-    height: 26px;
-    margin: 0;
+    height: 46px;
+    margin: 0 auto;
     padding: 2px 11px 2px 10px;
-    border: 1px solid #e5e5e5;
     border-radius: 3px;
-    font-size: 14px;
+    font-size: 18px;
     line-height: 20px;
     white-space: nowrap;
     font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;
@@ -34,28 +37,55 @@
     vertical-align: baseline;
     -webkit-user-select: none;
     box-sizing: border-box;
-    color: #ccc;
+    color: #fff;
+    cursor: pointer;
 }
 
 .splash-carousel, .splash-search-upload, .splash-spotlight, 
 .splash-creators-cta, .splash-thankyou, .spalsh-footer {
     width: 80%;
+    max-width: 1240px;
+    min-width: 960px;
     // border: red 2px solid;
     background-color: white;
 }
 
 .splash-carousel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     height: 465px;
     background-image: url(https://a-v2.sndcdn.com/assets/images/sc_landing_header_web_featured_artists-8081257b.jpg);
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
+    color: #fff;
+    font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;
+}
+
+.splash-carousel h1 {
+    font-size: 28px;
+    font-weight: 100;
+    margin-bottom: 15px;
+    margin-top: -25px;
+}
+
+.splash-carousel p {
+    max-width: 530px;
+    font-size: 18px;
+    line-height: 1.5em;
+    font-weight: 100;
+    text-align: center;
+    margin-bottom: 15px;
+    font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;
+
 }
 
 .splash-search-upload {
     display: flex;
     justify-content: center;
     padding-top: 75px;
-    padding-bottom: 75px;
+    // padding-bottom: 25px;
 }
 
 .splash-search {
@@ -125,11 +155,13 @@
     padding: 13px 23px;
     height: 46px;
     background-color: #f50;
-    border-color: #f50;
+    // border-color: #f50;
+    border: 1px solid #f50;
+
     color: #fff;
-    font-size: 16px;
-    line-height: 18px;
-    border: 1px solid #e5e5e5;
+    font-size: 18px;
+    line-height: 20px;
+    // border: 1px solid #e5e5e5;
     border-radius: 3px;
     cursor: pointer;
     display: inline-block;
@@ -147,22 +179,160 @@
 .splash-spotlight {
     display: flex;
     flex-direction: column;
-    padding-top: 75px;
+    justify-content: center;
+    padding-top: 50px;
     padding-bottom: 75px;
+}
+
+.splash-spotlight h2 {
+    font-size: 24px;
+    font-weight: 100;
+    text-align: center;
+    padding-bottom: 50px;
+}
+
+.trending-songs {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.trend-set1, .trend-set2 {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.trending-song {
+    width: 160px;
+    height: 160px;
+    padding-bottom: 78px;
+    position: relative;
+    background: url('https://a-v2.sndcdn.com/assets/images/sc-icons/favicon-2cadd14bdb.ico') no-repeat;
+    background-size: contain;
+}
+
+.trending-song h3 {
+    font-size: 14px;
+    line-height: 1.4;
+    font-weight: 100px;
+    position: absolute;
+    bottom: 4em;
+}
+
+.trending-song p {
+    color: #999;
+    font-size: 12px;
+    line-height: 1.4;
+    font-weight: 100px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    word-break: normal;
+    position: absolute;
+    bottom: 3em
 }
 
 .splash-creators-cta {
     display: flex;
-    color: #ccc;
-    height: 435px;
-    background-image: url(https://a-v2.sndcdn.com/assets/images/hp_creator_image_featured_artists-798050ae.jpg);
-    background-size: contain;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    height: 450px;
+    background-image: url(https://a-v2.sndcdn.com/assets/images/sc_landing_header_web_b-447230ef.jpg);
+    background-size: cover;
+    // background-position: right 0;
     background-repeat: no-repeat;
+    // padding-bottom: 75px;
+}
+
+.splash-creators-cta h1 {
+    font-size: 28px;
+    font-weight: 100;
+    margin-bottom: 25px;
+    // margin-top: -50px;
+}
+
+.splash-creators-cta p {
+    max-width: 530px;
+    font-size: 18px;
+    line-height: 1.5em;
+    font-weight: 100;
+    text-align: center;
+    margin-bottom: 25px;
+    font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;
+}
+
+.creators-cta-button {
+    font-size: 18px;
+    line-height: 20px;
+    padding: 13px 24px;
+    background: transparent;
+    color: #fff;
+    border-color: #ccc;
+    display: inline-block;
+    position: relative;
+    margin: 0;
+    border: 1px solid #e5e5e5;
+    border-radius: 3px;
+    cursor: pointer;
+    white-space: nowrap;
+    text-align: center;
+
 }
 
 .splash-thankyou {
     display: flex;
     flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
     padding-top: 75px;
     padding-bottom: 75px;
+
+}
+
+.splash-thankyou h1 {
+    font-size: 36px;
+    font-weight: 100;
+}
+
+.splash-thankyou h2 {
+    font-size: 22px;
+    font-weight: 100;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.splash-signup {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+}
+
+.splash-signup p {
+    padding-right: 15px;
+    font-size: 12px;
+}
+
+.splash-login-button {
+    vertical-align: center;
+    transition: opacity .2s linear;
+    font-size: 16px;
+    line-height: 18px;
+    padding: 10px 15px;
+    height: 40px;
+    display: inline-block;
+    position: relative;
+    margin: 0;
+    border: 1px solid #e5e5e5;
+    border-radius: 3px;
+    background-color: #fff;
+    cursor: pointer;
+    color: #333;
+    white-space: nowrap;
+    font-weight: 100;
+    text-align: center;
+    box-sizing: border-box;
 }
