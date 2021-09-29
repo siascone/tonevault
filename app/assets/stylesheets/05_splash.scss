@@ -3,11 +3,65 @@
     flex-direction: column;
     align-items: center;
     width: 100%;
+    // object-fit: contain;
 }
 
-.splash-main h1 {
-    margin-top: 150px;
-    color: #999;
-    font-size: 24px;
-    font-family: Lucida Grande,Helvetica,Arial,sans-serif;
+// .splash-main h1 {
+//     margin-top: 150px;
+//     color: #999;
+//     font-size: 24px;
+//     font-family: Lucida Grande,Helvetica,Arial,sans-serif;
+// }
+
+.explore, .upload, .signup-button {
+    background-color: #f50;
+    display: inline-block;
+    position: relative;
+    height: 26px;
+    margin: 0;
+    padding: 2px 11px 2px 10px;
+    border: 1px solid #e5e5e5;
+    border-radius: 3px;
+    font-size: 14px;
+    line-height: 20px;
+    white-space: nowrap;
+    font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;
+    font-weight: 100;
+    text-align: center;
+    vertical-align: baseline;
+    -webkit-user-select: none;
+    box-sizing: border-box;
+    color: #ccc;
+}
+
+.splash-carousel, .splash-search-upload, .splash-spotlight, 
+.splash-creators-cta, .splash-thankyou, .spalsh-footer {
+    width: 80%;
+    border: red 2px solid;
+}
+
+.splash-carousel {
+    height: 465px;
+    background-image: url(https://a-v2.sndcdn.com/assets/images/sc_landing_header_web_featured_artists-8081257b.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.splash-search-upload {
+    display: flex;
+    justify-content: center;
+}
+
+.splash-spotlight {
+    display: flex;
+    flex-direction: column;
+}
+
+.splash-creators-cta {
+    display: flex;
+    color: #ccc;
+    height: 435px;
+    background-image: url(https://a-v2.sndcdn.com/assets/images/hp_creator_image_featured_artists-798050ae.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
 }
