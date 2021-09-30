@@ -48,4 +48,12 @@ class User < ApplicationRecord
         end
     end
 
+    # associations
+
+    has_many_attached :songs
+
+    has_many :tracks,
+        foreign_key: :artist_id,
+        class_name: :Track
+
 end
