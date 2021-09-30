@@ -57,7 +57,7 @@ class Logout extends React.Component {
                             </div>
                             <div className='trending-song'>
                                 <h3>LearnMorseCode</h3>
-                                <p>A Morse Code Educational App</p>
+                                <p>A Morse Code Trainer</p>
                             </div>
                         </div>
                     </div>
