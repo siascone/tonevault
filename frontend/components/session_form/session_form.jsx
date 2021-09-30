@@ -59,7 +59,13 @@ class SessionForm extends React.Component {
 
         let fields;
         let required;
-        let emailErrorLabel, usernameErrorLabel, passwordErrorLabel, loginErrorsLabel = <label></label>;
+        let emailErrorLabel, 
+        usernameErrorLabel, 
+        passwordErrorLabel, 
+        loginErrorsLabel,
+        usernameTakenLabel,
+        emailTakenLabel = <label></label>;
+
         let failedLogin
 
         if (this.props.errors.length) {
@@ -69,8 +75,16 @@ class SessionForm extends React.Component {
                     usernameErrorLabel = <label forHtml='username' className="error-message">Username can't be blank</label>
                 }
 
+                if (error === 'Username has already been taken') {
+                    usernameTakenLabel = <label forHtml='username' className="error-message">That username has already been taken</label>
+                }
+
                 if (error === 'Email can\'t be blank') {
                     emailErrorLabel = <label forHtml='email' className="error-message">Email can't be blank</label>
+                }
+
+                if (error === 'Email has already been taken') {
+                    emailTakenLabel = <label forHtml='email' className="error-message">That email has already been used</label>
                 }
 
                 if (error === 'Password is too short (minimum is 6 characters)') {
@@ -81,6 +95,7 @@ class SessionForm extends React.Component {
                     loginErrorsLabel = <label forHtml='password' className="error-message">Enter a valid username and passowrd combination</label>
                     failedLogin = 'failed-login'
                 }
+
             })
         }
         
@@ -97,6 +112,7 @@ class SessionForm extends React.Component {
                     required
                 />
                 {usernameErrorLabel}
+                {usernameTakenLabel}
                 
                 <input
                     id="email"
@@ -108,6 +124,7 @@ class SessionForm extends React.Component {
                     required
                 />
                 {emailErrorLabel}
+                {emailTakenLabel}
                 
                 <input
                     id="password"
