@@ -3,21 +3,23 @@
     flex-direction: column;
     align-items: center;
     width: 100%;
-    font-family: Lucida Grande,Helvetica,Arial,sans-serif;
+    font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;
     background-color: rgb(247, 243, 243);
+    color: #333;
+}
+
+.logout-message, .logout-bio, .logout-projects, .logout-social {
+    max-width: 1240px;
+    min-width: 80%;
 }
 
 .logout-message, .logout-bio, .logout-projects {
     background-color: white;
 }
 
+
 .logout-main h1 {
     font-size: 37px;
-    font-weight: 100;
-}
-
-.logout-main h2 {
-    font-size: 24px;
     font-weight: 100;
 }
 
@@ -25,8 +27,10 @@
     display: flex;
     justify-content: center;
     min-width: 80%;
-    padding-top: 75px;
-    padding-bottom: 75px;
+    padding-top: 150px;
+    padding-bottom: 150px;
+    background-color: black;
+    color: #fff;
 }
 
 .logout-bio {
@@ -37,6 +41,12 @@
     align-items: center;
     padding-top: 50px;
     padding-bottom: 50px;
+    // background-color: #FF5500;
+    // color: #fff;
+}
+.logout-bio h2 {
+    font-size: 24px;
+    font-weight: 100;
 }
 
 .logout-projects {
@@ -46,6 +56,8 @@
     min-width: 80%;
     padding-top: 50px;
     padding-bottom: 50px;
+    background-color: black;
+    color: #fff;
 }
 
 .projects {
@@ -56,16 +68,7 @@
     padding-bottom: 25px;    
 }
 
-.projects div, .social-media div {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 250px;
-    width: 250px;
-    background-color: black;
-    color: #FF5500;
-    border-radius: 3px;
-}
+
 
 .bio-and-image {
     display: flex;
@@ -92,7 +95,7 @@
     align-items: center;
     background-color: black;
     // background-image: url(../images/bio_image.JPG);
-    color: #FF5500;
+    color: fuchsia;
     border-radius: 3px;
     height: 400px;
     width: 400px;
@@ -121,7 +124,18 @@
     width: 400px;
 }
 
-.logout-about {
+.projects div, .social-media div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 250px;
+    width: 250px;
+    background-color: #FF5500;
+    color: hsl(155, 99%, 49%);
+    border-radius: 3px;
+}
+
+.logout-social {
     display: flex;
     flex-direction: column;
     align-items: center;
