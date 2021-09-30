@@ -13,7 +13,7 @@ class Logout extends React.Component {
                     <h1>You've signed out, so what's next?</h1>
                     <br />
                     <p>
-                        My name is Spencer and I thank you for checking out ToneVault.
+                        Well, my name is Spencer and I want to thank you for checking out ToneVault.
                         While I still have you, please take a moment to take a look
                         at what i've been up to and if you'd like to connect I'd be happy to chat!
                     </p>
