@@ -13,9 +13,9 @@ class Api::TracksController < ApplicationController
 
     def create 
         @track = Track.new(track_params)
-        # for testing, pass artist_id back to server 
-        # from session.id (currentUser) on frontend
-        # @track.artist_id = 12 
+        
+        # @track.artist_id = 13
+        @track.artist_id = current_user.id
 
         if @track.save
             render :show
@@ -50,6 +50,6 @@ class Api::TracksController < ApplicationController
     private
 
     def track_params 
-        params.require(:track).permit(:title, :genre, :description, :caption, :id)
+        params.require(:track).permit(:title, :genre, :description, :caption, :id, :private)
     end
 end
