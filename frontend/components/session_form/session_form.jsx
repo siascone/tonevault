@@ -1,5 +1,5 @@
 import React from 'react';
-import { withRouter } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
 
 class SessionForm extends React.Component {
     constructor(props) {
@@ -23,21 +23,29 @@ class SessionForm extends React.Component {
     handleSubmit(e) {
         e.preventDefault();
         const user = Object.assign({}, this.state);
-        this.props.processForm(user)
-            .then(() => this.props.closeModal())
-            .then(() => this.props.history.push('/discover'));
-            
-        // this.props.history.push('/discover')
+
+        if (this.props.history.location.pathname === '/upload') {
+            this.props.loginDemoUser()
+                .then(() => this.props.closeModal())
+        } else {
+            this.props.processForm(user)
+                .then(() => this.props.closeModal())
+                .then(() => this.props.history.push('/discover'));
+        }
 
     };
 
     guestLogin(e) {
         e.preventDefault();
-        this.props.loginDemoUser()
-            .then(() => this.props.closeModal())
-            .then(() => this.props.history.push('/discover'));
-
-        // this.props.history.push('/discover')
+        
+        if (this.props.history.location.pathname === '/upload') {
+            this.props.loginDemoUser()
+                .then(() => this.props.closeModal())
+        } else {
+            this.props.loginDemoUser()
+                .then(() => this.props.closeModal())
+                .then(() => this.props.history.push('/discover'));
+        }
     }
 
     renderErrors() {
@@ -59,6 +67,8 @@ class SessionForm extends React.Component {
 
         let fields;
         let required;
+        let signupLoginLink
+
         let emailErrorLabel, 
         usernameErrorLabel, 
         passwordErrorLabel, 
@@ -72,27 +82,27 @@ class SessionForm extends React.Component {
             required = 'required';
             this.props.errors.forEach(error => {
                 if (error === 'Username can\'t be blank') {
-                    usernameErrorLabel = <label forHtml='username' className="error-message">Username can't be blank</label>
+                    usernameErrorLabel = <label htmlFor='username' className="error-message">Username can't be blank</label>
                 }
 
                 if (error === 'Username has already been taken') {
-                    usernameTakenLabel = <label forHtml='username' className="error-message">That username has already been taken</label>
+                    usernameTakenLabel = <label htmlFor='username' className="error-message">That username has already been taken</label>
                 }
 
                 if (error === 'Email can\'t be blank') {
-                    emailErrorLabel = <label forHtml='email' className="error-message">Email can't be blank</label>
+                    emailErrorLabel = <label htmlFor='email' className="error-message">Email can't be blank</label>
                 }
 
                 if (error === 'Email has already been taken') {
-                    emailTakenLabel = <label forHtml='email' className="error-message">That email has already been used</label>
+                    emailTakenLabel = <label htmlFor='email' className="error-message">That email has already been used</label>
                 }
 
                 if (error === 'Password is too short (minimum is 6 characters)') {
-                    passwordErrorLabel = <label forHtml='password' className="error-message">Password is too short, the minimum is 6 characters</label>
+                    passwordErrorLabel = <label htmlFor='password' className="error-message">Password is too short, the minimum is 6 characters</label>
                 }
 
                 if (error === 'Invalid username/passowrd combination') {
-                    loginErrorsLabel = <label forHtml='password' className="error-message">Enter a valid username and passowrd combination</label>
+                    loginErrorsLabel = <label htmlFor='password' className="error-message">Enter a valid username and passowrd combination</label>
                     failedLogin = 'failed-login'
                 }
 
@@ -100,6 +110,10 @@ class SessionForm extends React.Component {
         }
         
         if (this.props.formType === 'Signup') {
+            signupLoginLink = <p className='signup-login-link'>
+                    Already have an account? 
+                    <button onClick={() => this.props.modal('Login')}>Login</button>
+                </p>
             fields = <div className='session-form-fields'>
                 
                 <input
@@ -138,8 +152,12 @@ class SessionForm extends React.Component {
                 {passwordErrorLabel}
             </div>
         } else {
+            signupLoginLink = <p className='signup-login-link'>
+                Don't have an account yet?
+                <button onClick={() => this.props.modal('Signup')}>Signup</button>
+            </p>
             fields = <div className='session-form-fields'>
-                <label forHtml="username"></label>
+                <label htmlFor="username"></label>
                 <input
                     id="username"
                     type="text"
@@ -164,7 +182,6 @@ class SessionForm extends React.Component {
             </div>
         }
 
-        
 
         return (
             <div className='modal'>
@@ -181,7 +198,7 @@ class SessionForm extends React.Component {
                     </button>
                 </form>
                 <p className='session-notice'>
-                    We will not use your email and devices information for updates and tips
+                    We will not use your email nor devices information for updates and tips
                     on Tonevault's products and services, nor for activity notifications.
                     There is currently nothing to unsubscribe from so, no need to worry.
                 </p>
@@ -190,7 +207,7 @@ class SessionForm extends React.Component {
                     We also won't use the information you provid to
                     target adds as not described in our non existant Privacy Policy.
                 </p>
-                {/* {this.renderErrors()} */}
+                {signupLoginLink}
             </div>
         )
     }

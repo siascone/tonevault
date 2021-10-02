@@ -31,12 +31,33 @@
     cursor: pointer;
 }
 
-.session-notice {
+.session-notice, .signup-login-link, .signup-login-link > button {
     font-weight: 100;
     color: #999;
     line-height: 1.462;
     font-size: 12px;
     font-family: Lucida Grande,Helvetica,Arial,sans-serif;
+}
+
+.signup-login-link {
+    display: flex;
+    align-content: center;
+    padding-top: 15px;
+    align-self: center;
+    text-align: center;
+}
+
+.signup-login-link > button {
+    padding: 0;
+    padding-left: 4px;
+    border: none;
+    background-color: #fff;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.signup-login-link > button:hover {
+    color: black;
 }
 
 // .session-form input:not(:focus):not(:placeholder-shown):invalid {

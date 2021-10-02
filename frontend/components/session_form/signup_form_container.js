@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { signup, login, clearErrors } from '../../actions/session_actions';
 import SessionForm from './session_form';
-import { closeModal } from '../../actions/modal_actions';
+import { closeModal, openModal } from '../../actions/modal_actions';
 
 const mapStatetoProps = ({ errors }) => {
     return {
@@ -18,7 +18,8 @@ const mapDispatchToProps = dispatch => {
         processForm: (user) => dispatch(signup(user)),
         loginDemoUser: () => dispatch(login({ username: 'guest', password: 'password' })),
         closeModal: () => dispatch(closeModal()),
-        clearErrors: () => dispatch(clearErrors())
+        clearErrors: () => dispatch(clearErrors()),
+        modal: (type) => dispatch(openModal(type))
     }
 }
 

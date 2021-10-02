@@ -3,6 +3,13 @@ import React from "react";
 class Splash extends React.Component {
     constructor(props) {
         super(props)
+
+        this.upload = this.upload.bind(this);
+    }
+
+    upload(e) {
+        e.preventDefault();
+        this.props.history.push('/upload');
     }
 
     render() {
@@ -17,7 +24,7 @@ class Splash extends React.Component {
                         artists.
                     </p>
                     <br />
-                    <button className='splash-upload'>Start uploading today</button>
+                    <button className='splash-upload' onClick={this.upload}>Start uploading today</button>
                 </div>
 
                 <div className='splash-search-upload'>
@@ -31,7 +38,7 @@ class Splash extends React.Component {
                         <button className='search-icon-button'></button>
                     </form>
                     <p>or</p>
-                    <button className='splash-upload'>Upload your own</button>
+                    <button className='splash-upload' onClick={this.upload}>Upload your own</button>
                 </div>
 
                 <div className='splash-spotlight'>
