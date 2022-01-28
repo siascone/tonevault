@@ -10,7 +10,7 @@ class Logout extends React.Component {
 
         return (
             <div className='splash-main'>
-                <div className='splash-carousel'>
+                <div className='logout-carousel'>
                     <h1>You've signed out, so what's next?</h1>
                     <br />
                     <p>
@@ -51,7 +51,7 @@ class Logout extends React.Component {
                     <a href='https://github.com/siascone' className='explore github-anchor'>Explore my projects</a>
                 </div>
 
-                <div className='splash-creators-cta'>
+                <div className='logout-creators-cta'>
                     <h1>Calling all recruiters</h1>
                     <p>
                         I am a programer consumed by nature and music. I have a 
