@@ -1,16 +1,18 @@
-import { connect } from 'react-redux';
-import Splash from './splash';
+import React from 'react'
+import { connect } from 'react-redux'
+import { openModal } from '../../actions/modal_actions'
+import Splash from './splash'
 
-const mapStatetoProps = state => {
+const mapSTP = state => {
     return {
         state: state
     }
 }
 
-const mapDispatchToProps = dispatch => {
+const mapDTP = dispatch => {
     return {
-        test: () => window.alert('Hello from the splash page')
+        openModal: (modalType) => dispatch(openModal(modalType))
     }
 }
 
-export default connect(mapStatetoProps, mapDispatchToProps)(Splash);
+export default connect(mapSTP, mapDTP)(Splash)
