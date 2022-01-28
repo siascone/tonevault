@@ -152,7 +152,11 @@
     padding-bottom: 25px;
 }
 
-.github-anchor {
+.github-anchor, .resume {
     text-decoration: none;
     padding-top: 12px;
+}
+
+.email, .calendly, .linkedin {
+    text-decoration: none;
 }
