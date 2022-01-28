@@ -1,8 +1,18 @@
 import React from "react";
+import {withRouter} from 'react-router-dom'
 
 class Splash extends React.Component {
     constructor(props) {
         super(props)
+
+        this.openAuthPage = this.openAuthPage.bind(this);
+    }
+
+    openAuthPage(e, modalType) {
+        e.preventDefault();
+        e.stopPropagation();
+
+        this.props.openModal(modalType);
     }
 
     render() {
@@ -104,19 +114,15 @@ class Splash extends React.Component {
                 <div className='splash-thankyou'>
                     <h1>Thanks for listening. Now join in.</h1>
                     <h2>Save tracks, follow artists and build playlists. All for free.</h2>
-                    <button className='signup-button'>Create account</button>
+                    <button className='signup-button' onClick={(e) => this.openAuthPage(e, 'Signup')}>Create account</button>
                     <div className='splash-signup'>
                         <p>Already have an account?</p>
-                        <button className='splash-login-button'>Sign in</button>
+                        <button className='splash-login-button' onClick={(e) => this.openAuthPage(e, 'Login')}>Sign in</button>
                     </div>
                 </div>
-
-                {/* <div className='spalsh-footer'>
-                    Footer stuff here
-                </div> */}
             </div>
         )
     }
 }
 
-export default Splash;
+export default withRouter(Splash);

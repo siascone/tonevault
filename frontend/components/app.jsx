@@ -8,6 +8,7 @@ import { AuthRoute, ProtectedRoute } from '../util/route_util';
 import Splash from '../components/splash/splash'
 import Logout from '../components/logout/logout'
 import Discover from './discover/discover';
+import SplashContainer from './splash/splash_container';
 
 
 const App = () => {
@@ -19,7 +20,7 @@ const App = () => {
             <Switch>
                 <Route exact path='/logout' component={Logout} />
                 <ProtectedRoute exact path='/discover' component={Discover} />
-                <Route exact path='/' component={Splash} />
+                <Route exact path='/' component={SplashContainer} />
                 <Redirect to='/' />
             </Switch>
         </div>
