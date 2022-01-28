@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link, withRouter } from 'react-router-dom';
 
 class Logout extends React.Component {
     constructor(props) {
@@ -14,8 +15,8 @@ class Logout extends React.Component {
                     <br />
                     <p>
                         Well, my name is Spencer and I want to thank you for checking out ToneVault.
-                        While I still have you, please take a moment to take a look
-                        at what i've been up to and if you'd like to connect I'd be happy to chat!
+                        While I still have you, please take a moment to look
+                        at what I've been up to and if you'd like to connect I'd be happy to chat!
                     </p>
                     <br />
                     <button className='splash-upload'>Reach out today</button>
@@ -61,7 +62,7 @@ class Logout extends React.Component {
                             </div>
                         </div>
                     </div>
-                    <button className='explore'>Explore my projects</button>
+                    <a href='https://github.com/siascone' className='explore github-anchor'>Explore my projects</a>
                 </div>
 
                 <div className='splash-creators-cta'>
@@ -71,7 +72,7 @@ class Logout extends React.Component {
                         background in contemporary composition and a passion for
                         the environment. Let's work together!
                     </p>
-                    <button className='creators-cta-button'>Schedule an interview</button>
+                    <button className='creators-cta-button'>Schedule an Interview</button>
                 </div>
 
                 <div className='splash-thankyou'>
@@ -176,4 +177,4 @@ class Logout extends React.Component {
     };
 };
 
-export default Logout;
+export default withRouter(Logout);
